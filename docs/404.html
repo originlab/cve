@@ -1,0 +1,9 @@
+<script>
+let m = window.location.pathname.match(/^\/cve\/(cve-\d+-\d+)/i);
+if (m) {
+  let cve = m[1];
+  window.location.replace('https://github.com/originlab/cve/security/advisories?query=' + cve);
+} else {
+  window.location.replace('https://github.com/originlab/cve/security');
+}
+</script>
